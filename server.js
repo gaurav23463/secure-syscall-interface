@@ -40,7 +40,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => {
     console.error("MongoDB connection failed:", err);
     process.exit(1);
-  });
+  })
   .then(() => {
     ensureStorageDirectory();
     app.listen(PORT, () => {
