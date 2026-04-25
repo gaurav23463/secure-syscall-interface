@@ -11,7 +11,14 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/secure-syscall-interface';
+const MONGO_URI = process.env.MONGO_URI;
+
+if (!MONGO_URI) {
+  console.error("❌ MONGO_URI is not defined");
+  process.exit(1);
+}
+
+console.log("Using Mongo URI:", MONGO_URI);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
