@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Secure Syscall Interface</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Syscall Control Dashboard</h1>
+      <p id="userRole" class="subtitle"></p>
+    </div>
+    <button id="logoutButton" class="button secondary">Logout</button>
+  </header>
+
+  <main class="container dashboard-grid">
+    <section class="card">
+      <h2>File Operations</h2>
+      <div class="operation-row">
+        <label for="fileName">File Name</label>
+        <input id="fileName" type="text" placeholder="example.txt" />
+      </div>
+      <div class="operation-row">
+        <label for="fileContent">File Content</label>
+        <textarea id="fileContent" rows="6" placeholder="Enter file content here..."></textarea>
+      </div>
+      <div class="button-row wrap">
+        <button id="listButton" class="button tertiary">Refresh File List</button>
+        <button id="readButton" class="button primary">Read File</button>
+        <button id="writeButton" class="button success">Write File</button>
+        <button id="deleteButton" class="button danger">Delete File</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Active Files</h2>
+      <ul id="fileList" class="item-list"></ul>
+    </section>
+
+    <section class="card card-span-2">
+      <h2>System Call Audit</h2>
+      <div id="logPanel" class="log-panel"></div>
+    </section>
+
+    <section class="card card-span-2">
+      <p class="info-text">The interface simulates secure syscall handling by validating requests, enforcing user roles, and recording every action for audit review.</p>
+    </section>
+  </main>
+
+  <div id="message" class="message dashboard-message"></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

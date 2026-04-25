@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure System Call Interface</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Secure System Call Interface</h1>
+      <p>Modern, role-aware system call simulator designed for secure teaching, auditing, and safe file operations.</p>
+      <div class="button-row">
+        <a class="button primary" href="login.html">Login</a>
+        <a class="button secondary" href="register.html">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Why this project matters</h2>
+      <p>This interface demonstrates how system calls can be protected by authentication, role-based access control, and secure request validation. It is built to be user-friendly for learners and secure enough to illustrate production-minded design.</p>
+    </section>
+
+    <section class="card grid-3">
+      <div>
+        <h3>Authentication</h3>
+        <p>Users log in with credentials and receive a secure JWT token for every request.</p>
+      </div>
+      <div>
+        <h3>Role-Based Access</h3>
+        <p>Admins view audit logs while regular users are limited to safe file operations.</p>
+      </div>
+      <div>
+        <h3>Audit Logging</h3>
+        <p>Every simulated syscall is recorded in MongoDB with timestamp, action, and outcome.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Secure System Call Interface &mdash; Academic submission ready.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Secure Syscall Interface</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="container auth-card">
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required minlength="6" />
+
+      <button type="submit" class="button primary">Sign In</button>
+      <p class="small-text">New to the interface? <a href="register.html">Create an account</a>.</p>
+    </form>
+    <div id="message" class="message"></div>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>
